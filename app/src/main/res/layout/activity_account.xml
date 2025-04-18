@@ -119,7 +119,7 @@
                     <ImageView
                         android:layout_width="6dp"
                         android:layout_height="6dp"
-                        android:src="@drawable/modifier"/>
+                        android:src="@drawable/ico_modifier"/>
 
                 </LinearLayout>
 
