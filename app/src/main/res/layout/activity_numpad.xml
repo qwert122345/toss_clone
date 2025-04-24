@@ -11,8 +11,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:orientation="vertical">
 
         <!--앱 바-->
@@ -21,7 +19,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp">
 
             <ImageView
@@ -57,418 +57,477 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp">
+            android:orientation="vertical">
 
-            <!--~에서-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
 
-                <TextView
+                <!--~에서-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="내 토스뱅크 통장"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="20dp"
+                        android:textColor="@color/gray10"
+                        android:textStyle="bold"
+                        android:text="에서"/>
+
+                </LinearLayout>
+
+                <!--~에서 잔액-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="14dp"
+                        android:textColor="@color/gray20"
+                        android:textStyle="bold"
+                        android:text="잔액"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="14dp"
+                        android:textColor="@color/gray10"
+                        android:textStyle="bold"
+                        android:text="1,000"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="14dp"
+                        android:textColor="@color/gray20"
+                        android:textStyle="bold"
+                        android:text="원"/>
+
+                </LinearLayout>
+
+                <!--~로-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="내 토스증권 계좌"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="20dp"
+                        android:textColor="@color/gray10"
+                        android:textStyle="bold"
+                        android:text="로"/>
+
+                </LinearLayout>
+
+                <!--~로 잔액-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="14dp"
+                        android:textColor="@color/gray20"
+                        android:textStyle="bold"
+                        android:text="토스증권 12345566798"/>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_bold"
-                    android:textSize="20dp"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:text="내 토스뱅크 통장"/>
+                    android:orientation="horizontal">
 
-                <TextView
+                    <!--금액 인풋-->
+                    <TextView
+                        android:id="@+id/num_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/gray20"
+                        android:textSize="28dp"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:text="얼마나 옮길까요?"/>
+
+                    <TextView
+                        android:id="@+id/num_won"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="28dp"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:text="원"/>
+
+                </LinearLayout>
+
+                <!--잔액 입력-->
+                <LinearLayout
+                    android:id="@+id/leftmoney"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:textSize="20dp"
-                    android:textColor="@color/gray10"
-                    android:textStyle="bold"
-                    android:text="에서"/>
+                    android:background="@drawable/st_btn_small">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textColor="@color/gray10"
+                        android:textSize="12dp"
+                        android:text="잔액 ⋅ 1,000원 입력"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!--~에서 잔액-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="4dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:textSize="14dp"
-                    android:textColor="@color/gray20"
-                    android:textStyle="bold"
-                    android:text="잔액"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:textSize="14dp"
-                    android:textColor="@color/gray10"
-                    android:textStyle="bold"
-                    android:text="1,000"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:textSize="14dp"
-                    android:textColor="@color/gray20"
-                    android:textStyle="bold"
-                    android:text="원"/>
-
-            </LinearLayout>
-
-            <!--~로-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_bold"
-                    android:textSize="20dp"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:text="내 토스증권 계좌"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:textSize="20dp"
-                    android:textColor="@color/gray10"
-                    android:textStyle="bold"
-                    android:text="로"/>
-
-            </LinearLayout>
-
-            <!--~로 잔액-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="4dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:textSize="14dp"
-                    android:textColor="@color/gray20"
-                    android:textStyle="bold"
-                    android:text="토스증권 12345566798"/>
-
-            </LinearLayout>
-
-            <!--금액 인풋-->
-            <TextView
-                android:id="@+id/num_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:textColor="@color/gray20"
-                android:textSize="28dp"
-                android:fontFamily="@font/pretendard_bold"
-                android:text="얼마나 옮길까요?"/>
-
-            <!--잔액 입력-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/st_btn_small">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:textColor="@color/gray10"
-                    android:textSize="14dp"
-                    android:text="잔액 ⋅ 1,000원 입력"/>
-
-            </LinearLayout>
-
-            <!--숫자 클릭-->
+            <!--다음 + 숫자 패드-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:gravity="bottom"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="bottom">
 
-                <!--1줄-->
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <!--다음 버튼-->
+                <LinearLayout
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:background="@color/blue">
 
-                    <!--1-->
-                    <LinearLayout
-                        android:id="@+id/num_1"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="1"/>
-
-                    </LinearLayout>
-                    <!--2-->
-                    <LinearLayout
-                        android:id="@+id/num_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="2"/>
-
-                    </LinearLayout>
-                    <!--3-->
-                    <LinearLayout
-                        android:id="@+id/num_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="3"/>
-
-                    </LinearLayout>
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:text="다음"/>
 
                 </LinearLayout>
 
-                <!--2줄-->
+                <!--숫자 클릭-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="40dp"
+                    android:orientation="vertical">
 
-                    <!--4-->
+                    <!--1줄-->
                     <LinearLayout
-                        android:id="@+id/num_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <!--1-->
+                        <LinearLayout
+                            android:id="@+id/num_1"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="4"/>
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
 
-                    </LinearLayout>
-                    <!--5-->
-                    <LinearLayout
-                        android:id="@+id/num_5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="1"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        </LinearLayout>
+                        <!--2-->
+                        <LinearLayout
+                            android:id="@+id/num_2"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="5"/>
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
 
-                    </LinearLayout>
-                    <!--6-->
-                    <LinearLayout
-                        android:id="@+id/num_6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="2"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        </LinearLayout>
+                        <!--3-->
+                        <LinearLayout
+                            android:id="@+id/num_3"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="6"/>
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="3"/>
 
-                </LinearLayout>
-
-                <!--3줄-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <!--7-->
-                    <LinearLayout
-                        android:id="@+id/num_7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="7"/>
-
-                    </LinearLayout>
-                    <!--8-->
-                    <LinearLayout
-                        android:id="@+id/num_8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="8"/>
-
-                    </LinearLayout>
-                    <!--9-->
-                    <LinearLayout
-                        android:id="@+id/num_9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="9"/>
+                        </LinearLayout>
 
                     </LinearLayout>
 
-                </LinearLayout>
-
-                <!--4줄-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <!--00-->
+                    <!--2줄-->
                     <LinearLayout
-                        android:id="@+id/num_00"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <!--4-->
+                        <LinearLayout
+                            android:id="@+id/num_4"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="00"/>
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="4"/>
+
+                        </LinearLayout>
+                        <!--5-->
+                        <LinearLayout
+                            android:id="@+id/num_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="5"/>
+
+                        </LinearLayout>
+                        <!--6-->
+                        <LinearLayout
+                            android:id="@+id/num_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="6"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    <!--0-->
+
+                    <!--3줄-->
                     <LinearLayout
-                        android:id="@+id/num_0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <!--7-->
+                        <LinearLayout
+                            android:id="@+id/num_7"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/gray10"
-                            android:textSize="32dp"
-                            android:fontFamily="@font/pretendard_regular"
-                            android:text="0"/>
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="7"/>
+
+                        </LinearLayout>
+                        <!--8-->
+                        <LinearLayout
+                            android:id="@+id/num_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="8"/>
+
+                        </LinearLayout>
+                        <!--9-->
+                        <LinearLayout
+                            android:id="@+id/num_9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="9"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    <!--지우기-->
+
+                    <!--4줄-->
                     <LinearLayout
-                        android:id="@+id/num_clear"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:gravity="center"
-                        android:layout_weight="1">
+                        android:orientation="horizontal">
 
-                        <ImageView
-                            android:layout_width="28dp"
-                            android:layout_height="44dp"
-                            android:src="@drawable/ico_arrow_left"
-                            app:tint="@color/gray10"/>
+                        <!--00-->
+                        <LinearLayout
+                            android:id="@+id/num_00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="00"/>
+
+                        </LinearLayout>
+                        <!--0-->
+                        <LinearLayout
+                            android:id="@+id/num_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray10"
+                                android:textSize="32dp"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="0"/>
+
+                        </LinearLayout>
+                        <!--지우기-->
+                        <LinearLayout
+                            android:id="@+id/num_clear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="44dp"
+                                android:src="@drawable/ico_arrow_left"
+                                app:tint="@color/gray10"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
+
 
 
         </LinearLayout>

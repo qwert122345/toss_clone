@@ -1201,7 +1201,7 @@
         <!--네비-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="104dp"
+            android:layout_height="96dp"
             android:background="@drawable/st_navi"
             android:orientation="horizontal">
 
