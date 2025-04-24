@@ -21,8 +21,8 @@ class Tossbank : AppCompatActivity() {
             startActivity(pageEvent)
         }
 
-        val back_1 = findViewById<ImageView>(R.id.ico_back_1)
-        back_1.setOnClickListener{
+        val back = findViewById<ImageView>(R.id.ico_back)
+        back.setOnClickListener{
             val pageEvent = Intent(this,MainActivity::class.java)
             startActivity(pageEvent)
         }

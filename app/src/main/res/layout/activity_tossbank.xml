@@ -27,7 +27,7 @@
             android:layout_marginLeft="8dp">
 
             <ImageView
-                android:id="@+id/ico_back_1"
+                android:id="@+id/ico_back"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/ico_chevron_left"

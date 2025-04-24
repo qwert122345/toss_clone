@@ -16,7 +16,7 @@ class Wheretosend : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_wheretosend)
 
-        val back_2 = findViewById<ImageView>(R.id.ico_back_2)
+        val back_2 = findViewById<ImageView>(R.id.ico_back)
         back_2.setOnClickListener{
             val pageEvent = Intent(this,Tossbank::class.java)
             startActivity(pageEvent)
