@@ -28,7 +28,7 @@ class Wheretosend : AppCompatActivity() {
         val list_account_4 = findViewById<LinearLayout>(R.id.list_account_4)
         val list_account_5 = findViewById<LinearLayout>(R.id.list_account_5)
 
-        list_account_1.setOnClickListener{
+        list_account_2.setOnClickListener{
             val pageEvent = Intent(this,numpad::class.java)
             startActivity(pageEvent)
         }
