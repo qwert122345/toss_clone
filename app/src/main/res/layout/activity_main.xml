@@ -27,8 +27,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:orientation="horizontal"
                 android:paddingLeft="8dp"
                 android:paddingRight="4dp">
@@ -51,6 +51,7 @@
                         android:layout_height="wrap_content"
                         android:text="할 일"
                         android:textColor="@color/gray20"
+                        android:fontFamily="@font/pretendard_bold"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -94,8 +95,7 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="28dp">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -104,6 +104,7 @@
 
                     <!--토스뱅크 바로가기-->
                     <LinearLayout
+                        android:id="@+id/goto_tossbank"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
@@ -116,6 +117,7 @@
                             android:text="토스뱅크"
                             android:textColor="@color/gray5"
                             android:textSize="16dp"
+                            android:fontFamily="@font/pretendard_bold"
                             android:textStyle="bold" />
 
                         <!--fill 마진-->
@@ -128,7 +130,8 @@
                             android:layout_width="20dp"
                             android:layout_height="24dp"
                             android:padding="6dp"
-                            android:src="@drawable/ico_chevron_right" />
+                            android:src="@drawable/ico_chevron_right"
+                            app:tint="@color/gray30"/>
 
                     </LinearLayout>
 
@@ -146,6 +149,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/pretendard_regular"
                             android:text="자주 확인한 계좌"
                             android:textColor="@color/gray10"
                             android:textSize="12dp" />
@@ -190,11 +194,13 @@
                                         android:text="1,000,000원"
                                         android:textColor="@color/white"
                                         android:textSize="18dp"
+                                        android:fontFamily="@font/pretendard_bold"
                                         android:textStyle="bold" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_regular"
                                         android:text="KB종합통장-저축예금"
                                         android:textColor="@color/gray10"
                                         android:textSize="12dp" />
@@ -207,7 +213,6 @@
                                     android:layout_weight="1" />
 
                                 <LinearLayout
-                                    android:id="@+id/transfer_btn"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/st_trailing_btn">
@@ -215,6 +220,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_regular"
                                         android:text="송금"
                                         android:textColor="@color/gray5" />
 
@@ -256,12 +262,14 @@
                                         android:text="800,000원"
                                         android:textColor="@color/white"
                                         android:textSize="18dp"
+                                        android:fontFamily="@font/pretendard_bold"
                                         android:textStyle="bold" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="토스뱅크 외화통장"
+                                        android:fontFamily="@font/pretendard_regular"
                                         android:textColor="@color/gray10"
                                         android:textSize="12dp" />
 
@@ -298,6 +306,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:id="@+id/toss_bank"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical">
@@ -308,12 +317,14 @@
                                         android:text="1,200,000원"
                                         android:textColor="@color/white"
                                         android:textSize="18dp"
+                                        android:fontFamily="@font/pretendard_bold"
                                         android:textStyle="bold" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="토스뱅크 통장"
+                                        android:fontFamily="@font/pretendard_regular"
                                         android:textColor="@color/gray10"
                                         android:textSize="12dp" />
 
@@ -325,6 +336,7 @@
                                     android:layout_weight="1" />
 
                                 <LinearLayout
+                                    android:id="@+id/transfer_btn"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/st_trailing_btn">
@@ -333,7 +345,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="송금"
-                                        android:textColor="@color/gray5" />
+                                        android:fontFamily="@font/pretendard_regular"
+                                        android:textColor="@color/gray5"/>
 
                                 </LinearLayout>
 
@@ -373,12 +386,14 @@
                                         android:text="1,000,000원"
                                         android:textColor="@color/white"
                                         android:textSize="18dp"
+                                        android:fontFamily="@font/pretendard_bold"
                                         android:textStyle="bold" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="모임통장"
+                                        android:fontFamily="@font/pretendard_regular"
                                         android:textColor="@color/gray10"
                                         android:textSize="12dp" />
 
@@ -403,7 +418,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="44dp"
-                            android:background="@drawable/st_tabs"
+                            android:background="@drawable/st_tabs_main"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -421,6 +436,7 @@
                                     android:text="대출"
                                     android:textColor="@color/gray5"
                                     android:textSize="12dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -428,6 +444,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textColor="@color/gray10"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textSize="14dp"
                                     android:textStyle="bold" />
 
@@ -453,6 +470,7 @@
                                     android:text="증권"
                                     android:textColor="@color/gray5"
                                     android:textSize="12dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -461,6 +479,7 @@
                                     android:text="24"
                                     android:textColor="@color/gray10"
                                     android:textSize="14dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                             </LinearLayout>
@@ -485,6 +504,7 @@
                                     android:text="저축"
                                     android:textColor="@color/gray5"
                                     android:textSize="12dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -493,6 +513,7 @@
                                     android:text="3"
                                     android:textColor="@color/gray10"
                                     android:textSize="14dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                             </LinearLayout>
@@ -517,6 +538,7 @@
                                     android:text="전체"
                                     android:textColor="@color/gray5"
                                     android:textSize="12dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -525,6 +547,7 @@
                                     android:text="57"
                                     android:textColor="@color/gray10"
                                     android:textSize="14dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                             </LinearLayout>
@@ -572,12 +595,14 @@
                                     android:text="1,000,000원"
                                     android:textColor="@color/white"
                                     android:textSize="18dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="4월에 쓴돈 "
+                                    android:fontFamily="@font/pretendard_regular"
                                     android:textColor="@color/gray10"
                                     android:textSize="12dp" />
 
@@ -597,6 +622,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="내역"
+                                    android:fontFamily="@font/pretendard_regular"
                                     android:textColor="@color/gray5" />
 
                             </LinearLayout>
@@ -654,6 +680,7 @@
                                         android:text="내 신용점수"
                                         android:textColor="@color/white"
                                         android:textSize="14dp"
+                                        android:fontFamily="@font/pretendard_bold"
                                         android:textStyle="bold" />
 
                                 </LinearLayout>
@@ -671,6 +698,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_regular"
                                         android:text="확인하기"
                                         android:textColor="@color/gray5" />
 
@@ -690,7 +718,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="44dp"
-                            android:background="@drawable/st_tabs"
+                            android:background="@drawable/st_tabs_main"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -708,6 +736,7 @@
                                     android:text="계좌개설"
                                     android:textColor="@color/gray5"
                                     android:textSize="14dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                             </LinearLayout>
@@ -732,6 +761,7 @@
                                     android:text="카드발급"
                                     android:textColor="@color/gray5"
                                     android:textSize="14dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                             </LinearLayout>
@@ -756,6 +786,7 @@
                                     android:text="대출받기"
                                     android:textColor="@color/gray5"
                                     android:textSize="14dp"
+                                    android:fontFamily="@font/pretendard_bold"
                                     android:textStyle="bold" />
 
                             </LinearLayout>
@@ -768,19 +799,19 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="24dp"
                         android:background="@drawable/st_card"
                         android:gravity="center_vertical">
 
                         <LinearLayout
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:layout_marginRight="12dp"
-                            android:background="#FFCECA"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/st_ads"
                             android:gravity="center">
 
                             <ImageView
-                                android:layout_width="48dp"
+                                android:layout_width="40dp"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/im_galaxy_tab_s10_fe" />
 
@@ -798,6 +829,7 @@
                                 android:text="Galaxy Tab S10 FE"
                                 android:textColor="@color/gray5"
                                 android:textSize="18dp"
+                                android:fontFamily="@font/pretendard_bold"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -806,6 +838,7 @@
                                 android:text="특별한 혜택, 더블 업 찬스!"
                                 android:textColor="@color/gray10"
                                 android:textSize="14dp"
+                                android:fontFamily="@font/pretendard_bold"
                                 android:textStyle="bold" />
 
                         </LinearLayout>
@@ -822,7 +855,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="12dp"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -840,6 +873,7 @@
                                 android:text="고승환님을 위해 준비했어요"
                                 android:textColor="@color/gray5"
                                 android:textSize="16dp"
+                                android:fontFamily="@font/pretendard_bold"
                                 android:textStyle="bold" />
 
                         </LinearLayout>
@@ -873,6 +907,7 @@
                                         android:text="신용대출"
                                         android:textColor="@color/white"
                                         android:textSize="14dp"
+                                        android:fontFamily="@font/pretendard_bold"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -881,6 +916,7 @@
                                         android:text="한도 확인"
                                         android:textColor="@color/white"
                                         android:textSize="14dp"
+                                        android:fontFamily="@font/pretendard_bold"
                                         android:textStyle="bold" />
 
 
@@ -933,6 +969,7 @@
                                         android:text="바로 입금되는"
                                         android:textColor="@color/white"
                                         android:textSize="14dp"
+                                        android:fontFamily="@font/pretendard_bold"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -941,6 +978,7 @@
                                         android:text="카드론"
                                         android:textColor="@color/white"
                                         android:textSize="14dp"
+                                        android:fontFamily="@font/pretendard_bold"
                                         android:textStyle="bold" />
 
 
@@ -993,7 +1031,7 @@
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginRight="28dp"
+                                android:layout_marginRight="24dp"
                                 android:src="@drawable/gr_prime" />
 
                             <TextView
@@ -1002,6 +1040,7 @@
                                 android:text="토스프라임"
                                 android:textColor="@color/gray5"
                                 android:textSize="14dp"
+                                android:fontFamily="@font/pretendard_bold"
                                 android:textStyle="bold" />
 
                             <!--fill 마진-->
@@ -1014,7 +1053,8 @@
                                 android:layout_width="20dp"
                                 android:layout_height="24dp"
                                 android:padding="6dp"
-                                android:src="@drawable/ico_chevron_right" />
+                                android:src="@drawable/ico_chevron_right"
+                                app:tint="@color/gray30"/>
 
                         </LinearLayout>
 
@@ -1028,7 +1068,7 @@
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginRight="28dp"
+                                android:layout_marginRight="24dp"
                                 android:src="@drawable/gr_credit_card" />
                             `
 
@@ -1038,6 +1078,7 @@
                                 android:text="토스신용카드"
                                 android:textColor="@color/gray5"
                                 android:textSize="14dp"
+                                android:fontFamily="@font/pretendard_bold"
                                 android:textStyle="bold" />
 
                             <!--fill 마진-->
@@ -1050,7 +1091,8 @@
                                 android:layout_width="20dp"
                                 android:layout_height="24dp"
                                 android:padding="6dp"
-                                android:src="@drawable/ico_chevron_right" />
+                                android:src="@drawable/ico_chevron_right"
+                                app:tint="@color/gray30"/>
 
                         </LinearLayout>
 
@@ -1063,7 +1105,7 @@
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginRight="28dp"
+                                android:layout_marginRight="24dp"
                                 android:src="@drawable/gr_switch_loan" />
 
                             <TextView
@@ -1072,6 +1114,7 @@
                                 android:text="신용대출 갈아타기"
                                 android:textColor="@color/gray5"
                                 android:textSize="14dp"
+                                android:fontFamily="@font/pretendard_bold"
                                 android:textStyle="bold" />
 
                             <!--fill 마진-->
@@ -1084,7 +1127,8 @@
                                 android:layout_width="20dp"
                                 android:layout_height="24dp"
                                 android:padding="6dp"
-                                android:src="@drawable/ico_chevron_right" />
+                                android:src="@drawable/ico_chevron_right"
+                                app:tint="@color/gray30"/>
 
                         </LinearLayout>
 
@@ -1095,7 +1139,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="28dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1112,6 +1157,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="내 자산 숨기기"
+                                    android:fontFamily="@font/pretendard_regular"
                                     android:textColor="@color/gray20"
                                     android:textSize="14dp" />
 
@@ -1135,6 +1181,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="금액 가리기"
+                                    android:fontFamily="@font/pretendard_regular"
                                     android:textColor="@color/gray20"
                                     android:textSize="14dp" />
 
@@ -1154,14 +1201,16 @@
         <!--네비-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="108dp"
+            android:layout_height="104dp"
             android:background="@drawable/st_navi"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
 
                 <!--아이템1-->
                 <LinearLayout
@@ -1184,7 +1233,8 @@
                         android:layout_height="wrap_content"
                         android:text="홈"
                         android:textColor="@color/white"
-                        android:textSize="14dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/pretendard_bold"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -1210,7 +1260,8 @@
                         android:layout_height="wrap_content"
                         android:text="혜택"
                         android:textColor="@color/gray20"
-                        android:textSize="14dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/pretendard_bold"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -1236,7 +1287,8 @@
                         android:layout_height="wrap_content"
                         android:text="토스쇼핑"
                         android:textColor="@color/gray20"
-                        android:textSize="14dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/pretendard_bold"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -1262,16 +1314,11 @@
                         android:layout_height="wrap_content"
                         android:text="주식"
                         android:textColor="@color/gray20"
-                        android:textSize="14dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/pretendard_bold"
                         android:textStyle="bold" />
 
                 </LinearLayout>
-
-                <!--fill 마진-->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1" />
 
                 <!--아이템5-->
                 <LinearLayout
@@ -1284,7 +1331,7 @@
 
                     <ImageView
                         android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_height="20dp"
                         android:layout_marginBottom="8dp"
                         android:src="@drawable/ico_navi_hamburger"
                         app:tint="@color/gray30" />
@@ -1294,7 +1341,8 @@
                         android:layout_height="wrap_content"
                         android:text="전체"
                         android:textColor="@color/gray20"
-                        android:textSize="14dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/pretendard_bold"
                         android:textStyle="bold" />
 
                 </LinearLayout>
